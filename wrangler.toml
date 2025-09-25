@@ -1,0 +1,30 @@
+name = "filecoin-upload-worker"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+name = "filecoin-upload-worker-prod"
+
+[env.staging]
+name = "filecoin-upload-worker-staging"
+
+# Environment variables (secrets)
+# These need to be set using: wrangler secret put <NAME>
+# Required secrets:
+# - FILECOIN_PRIVATE_KEY: Private key for Filecoin wallet
+# - BACKEND_API_URL: URL of your backend API for notifications
+#
+# Optional secrets:
+# - BACKEND_API_KEY: Bearer token for backend API authentication
+# - FILECOIN_RPC_URL: Custom RPC URL (defaults to calibration network)
+# - FILECOIN_NETWORK: Network name (defaults to "calibration")
+# - THCLOUD_API_BASE: CDN base URL (defaults to "https://pdp-test.thcloud.dev")
+
+# Example commands to set secrets:
+# wrangler secret put FILECOIN_PRIVATE_KEY
+# wrangler secret put BACKEND_API_URL
+# wrangler secret put BACKEND_API_KEY
+# wrangler secret put FILECOIN_RPC_URL
+# wrangler secret put FILECOIN_NETWORK
+# wrangler secret put THCLOUD_API_BASE

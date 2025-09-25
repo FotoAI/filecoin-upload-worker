@@ -1,0 +1,23 @@
+{
+  "name": "upload-worker",
+  "version": "1.0.0",
+  "description": "cloudflare upload worker with filecoin",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:staging": "wrangler deploy --env staging",
+    "deploy:production": "wrangler deploy --env production",
+    "tail": "wrangler tail",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@filoz/synapse-sdk": "^0.25.1",
+    "dotenv": "^17.2.2"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
